@@ -234,18 +234,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearFieldError(message, messageError);
             }
 
-            // If form passes validation
-            if (isValid) {
-                // Show Success Modal
-                if (successModal) {
-                    document.getElementById("modalTitle").innerText = "Inquiry Received!";
-                    document.getElementById("modalMessage").innerText = 
-                        `Thank you ${fullName.value.trim()}, your inquiry for "${document.getElementById("category").value}" has been sent. We will contact you via WhatsApp/Email shortly.`;
-                    successModal.classList.add("active");
-                }
-                
-                contactForm.reset();
-            }
+        // If form passes validation
+if (isValid) {
+    // 1. Gather input values
+    const nameVal = fullName.value.trim();
+    const emailVal = email.value.trim();
+    const phoneVal = phone.value.trim();
+    const msgVal = message.value.trim();
+
+    // 2. Set your WhatsApp number (include country code, e.g. 234 for Nigeria)
+    const whatsappNumber = "2348106205953"; // REPLACE WITH YOUR 
+
+    // 3. Format WhatsApp message
+    const formattedMessage = `*New Store Inquiry*\n\n` +
+                             `*Name:* ${nameVal}\n` +
+                             `*Email:* ${emailVal}\n` +
+                             `*Phone:* ${phoneVal}\n` +
+                             `*Message:* ${msgVal}`;
+
+    // 4. Open WhatsApp in a new tab
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedMessage)}`;
+    window.open(whatsappUrl, "_blank");
+
+    // 5. Show Success Modal
+    if (successModal) {
+        document.getElementById("modalTitle").innerText = "Inquiry Received!";
+        document.getElementById("modalMessage").innerText = `Thank you ${nameVal}, your inquiry has been sent to our WhatsApp.`;
+        successModal.classList.add("active");
+    }
+
+    contactForm.reset();
+}
         });
     }
 

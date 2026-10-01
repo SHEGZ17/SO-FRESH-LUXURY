@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SO FRES# LUXURY | Contact & Order Inquiries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="1000150542.jpg" alt="SO FRES# Logo" class="logo-img" onerror="this.style.display='none'; document.getElementById('alt-logo-text').style.display='inline-block';">
+                <span id="alt-logo-text" class="logo-text">SO FRES# <span>LUXURY</span></span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="lookbook.html" class="nav-link">Lookbook</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1>CONTACT & ORDERS</h1>
+            <p>Connect with our team directly on WhatsApp, Instagram, or submit an inquiry form below.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT & ORDER INQUIRY SECTION -->
+    <section class="section contact-section">
+        <div class="container">
+
+            <!-- DIRECT SOCIAL CONTACT HUBS -->
+            <div class="social-contact-grid">
+                <a href="https://wa.me/2348106205953?text=Hello%20SO%20FRES%23%20LUXURY,%20I%20want%20to%20place%20an%20order." target="_blank" rel="noopener" class="contact-card whatsapp-card">
+                    <i class="fab fa-whatsapp contact-icon"></i>
+                    <div class="contact-card-text">
+                        <h3>Chat on WhatsApp</h3>
+                        <p>Fast order processing & size selection</p>
+                    </div>
+                </a>
+
+                <a href="https://instagram.com/sofreshluxury" target="_blank" rel="noopener" class="contact-card instagram-card">
+                    <i class="fab fa-instagram contact-icon"></i>
+                    <div class="contact-card-text">
+                        <h3>Follow on Instagram</h3>
+                        <p>@sofreshluxury | Drop alerts & DM orders</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- FORM CONTAINER -->
+            <div class="form-wrapper">
+                <form id="contactForm" class="custom-form" novalidate>
+                    <h3>ORDER & PRE-ORDER INQUIRY FORM</h3>
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="e.g. John Doe">
+                        <span class="error-msg" id="nameError">Please enter your full name (minimum 2 characters).</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="e.g. name@domain.com">
+                            <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="e.g. +234 800 000 0000">
+                            <span class="error-msg" id="phoneError">Please enter a valid phone number (digits only, min 7 digits).</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="category">Select Design / Category</label>
+                            <select id="category" class="form-control">
+                                <option value="Soft Signals Resort Shirt">Soft Signals Resort Shirt</option>
+                                <option value="Aim High Graphic Tee">Aim High Graphic Tee</option>
+                                <option value="Limited Tracksuit Pre-order">Limited Edition Tracksuit</option>
+                                <option value="Reshape Graphic Tee">Reshape "Don't Give Up" Tee</option>
+                                <option value="Mind Battle Graphic Tee">Mind Battle Graphic Tee</option>
+                                <option value="Flame Butterfly Tee">Flame Butterfly Tee</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="size">Preferred Size</label>
+                            <select id="size" class="form-control">
+                                <option value="S">Small (S)</option>
+                                <option value="M">Medium (M)</option>
+                                <option value="L">Large (L)</option>
+                                <option value="XL">Extra Large (XL)</option>
+                                <option value="XXL">XXL</option>
+                                <option value="XXXL">XXXL</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Order Details / Delivery Address *</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="Mention color preferences, quantity, or delivery city..."></textarea>
+                        <span class="error-msg" id="messageError">Please provide details (minimum 10 characters).</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">SUBMIT ORDER INQUIRY</button>
+                </form>
+
+                <!-- NEWSLETTER SUBSCRIPTION -->
+                <div class="newsletter-box">
+                    <h3>JOIN THE SO FRES# VIP CLUB</h3>
+                    <p>Be the first to know when new limited drop colors are released.</p>
+                    <form id="newsletterForm" class="newsletter-form" novalidate>
+                        <div class="input-inline">
+                            <input type="email" id="newsletterEmail" class="form-control" placeholder="Enter your email...">
+                            <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+                        </div>
+                        <span class="error-msg" id="newsletterError">Please enter a valid email address.</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CART SIDEBAR DRAWER -->
+<div id="cartModal" class="cart-drawer">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer-content">
+        <div class="cart-header">
+            <h3>YOUR SHOPPING BAG (<span id="cartCountHeader">0</span>)</h3>
+            <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+        </div>
+        
+        <div class="cart-body" id="cartItemsContainer">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cartTotalAmount">₦0</span>
+            </div>
+            <button id="whatsappCheckoutBtn" class="btn btn-primary btn-block">
+                <i class="fab fa-whatsapp"></i> CHECKOUT VIA WHATSAPP
+            </button>
+        </div>
+    </div>
+</div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">SO FRES# <span>LUXURY</span></span>
+                <p>Limited edition street couture made for high aimers.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/2348106205953" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/sofreshluxury" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 SO FRES# LUXURY. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- SUCCESS MODAL -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <i class="fas fa-check-circle modal-icon"></i>
+            <h3 id="modalTitle">Inquiry Received</h3>
+            <p id="modalMessage">Thank you for contacting SO FRES# LUXURY. Our team will contact you shortly to confirm your order.</p>
+            <button class="btn btn-primary" id="modalOkBtn">OKAY</button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

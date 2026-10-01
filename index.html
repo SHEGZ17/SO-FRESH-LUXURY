@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SO FRES# LUXURY | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">a
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+ <a href="index.html" class="logo">SO FRES# <span>LUXURY</span></a>
+</a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="collections.html" class="nav-link">Collections</a>
+                <a href="lookbook.html" class="nav-link">Lookbook</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-btn cart-btn" id="cartBtn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="subtitle">SO FRES# LUX LIMITED EDITION</p>
+           <div class="hero-logo-wrapper">
+   <h1 class="hero-title">SO FRES# </h1>
+    <h1 class="hero-subtitle-text">LUXURY</h1>
+</div>
+            <p class="hero-description">Street Couture & Bold Modern Tailoring.</p>
+            <a href="collections.html" class="btn btn-primary">EXPLORE COLLECTIONS</a>
+        </div>
+    </section>
+
+    <!-- FEATURED HIGHLIGHTS PREVIEW -->
+    <section class="section collections-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">FEATURED DROPS</h2>
+                <div class="title-divider"></div>
+                <p class="section-subtitle">Hand-picked selections from our latest limited releases.</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Soft Signals Resort Shirt -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="./image/soft signals.jpeg" alt="Soft Signals Resort Shirt" class="product-img"> <!--[span_0](start_span)[span_0](end_span) -->
+                        <span class="tag">LIMITED</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Collared Shirts</span>
+                        <h3 class="product-title">Soft Signals Resort Shirt</h3>
+                        <p class="sizes">Sizes: S, M, L, XL, XXL, XXXL</p>
+                        <p class="price">₦80000</p>
+                        <button class="btn btn-secondary add-to-cart-btn" data-name="Soft Signals Resort Shirt">ADD TO CART</button>
+                    </div>
+                </div>
+
+                <!-- Aim High Tee -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="./image/mind battke black.jpeg" alt="Aim High Graphic Tee" class="product-img"> <!--[span_1](start_span)[span_1](end_span) -->
+                        <span class="tag">HOT</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Graphic Tees</span>
+                        <h3 class="product-title">Aim High Shoot Higher Tee</h3>
+                        <p class="sizes">Multi-colorways available</p>
+                        <p class="price">₦60000</p>
+                        <button class="btn btn-secondary add-to-cart-btn" data-name="Aim High Tee">ADD TO CART</button>
+                    </div>
+                </div>
+
+                <!-- Tracksuit Set -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="./image/track suit blue.jpeg" alt="Royal Blue Tracksuit" class="product-img"> <!--[span_2](start_span)[span_2](end_span) -->
+                        <span class="tag">PRE-ORDER</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Lux Tracksuits</span>
+                        <h3 class="product-title">Royal Blue Luxury Tracksuit</h3>
+                        <p class="sizes">Pre-order Edition</p>
+                        <p class="price">₦120000</p>
+                        <button class="btn btn-secondary add-to-cart-btn" data-name="Royal Blue Tracksuit">PRE-ORDER NOW</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="collections.html" class="btn btn-outline">VIEW ALL DROPS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CART SIDEBAR DRAWER -->
+<div id="cartModal" class="cart-drawer">
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer-content">
+        <div class="cart-header">
+            <h3>YOUR SHOPPING BAG (<span id="cartCountHeader">0</span>)</h3>
+            <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+        </div>
+        
+        <div class="cart-body" id="cartItemsContainer">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cartTotalAmount">₦0</span>
+            </div>
+            <button id="whatsappCheckoutBtn" class="btn btn-primary btn-block">
+                <i class="fab fa-whatsapp"></i> CHECKOUT VIA WHATSAPP
+            </button>
+        </div>
+    </div>
+</div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">SO FRES# <span>LUXURY</span></span>
+                <p>Limited edition street couture made for high aimers.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="lookbook.html">Lookbook</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/2348106205953" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/sofreshluxury" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 SO FRES# LUXURY. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast">Item added to cart!</div>
+    <script src="./main.js"></script>
+</body>
+</html>
